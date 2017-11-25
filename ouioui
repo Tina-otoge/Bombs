@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 echo En avant oui-oui \!
-CMD=$(pwd)/$0
+CMD=$(dirname $0)/$(basename $0)
 while true; do
 	xfce4-terminal -e "$CMD" &
 	$0
